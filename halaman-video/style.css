@@ -14,3 +14,19 @@
     font-size: 14px;
 }
 
+.vertical-text {
+  /*  writing-mode: vertical-lr; /* Mengatur teks vertikal dari kiri ke kanan */
+   /* text-orientation: sideways; /* Mengatur orientasi teks menjadi miring */
+  /* transform: rotate(180deg); /* Memutar teks 180 derajat untuk memulai dari bawah*/
+   /* transform-origin: left bottom; /* Mengatur titik rotasi di kiri bawah */
+    writing-mode: vertical-lr; 
+    text-orientation: sideways; 
+    transform: rotate(180deg); 
+    transform-origin: left bottom; 
+    transform-origin: center;
+    
+  }
+  .ditambahkan{
+ margin-left: -12px;
+ /* padding: 28px 0; */
+  }
