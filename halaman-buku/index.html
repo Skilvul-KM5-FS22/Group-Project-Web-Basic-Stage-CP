@@ -6,7 +6,7 @@
   <title>Halaman BukuPedia</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+  <script src="script.js" defer></script>
 <body>
 
 <nav class="navbar navbar-expand-lg">
@@ -98,10 +98,32 @@
   </div>
 </div>
 
+<div class="container mt-5">
+  <div id="quoteCarousel" class="carousel slide" data-bs-ride="carousel">
+    <h3>Motivasi Hari Ini</h3>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <p class="quote">"Di balik kesuksesan terciptanya sebuah produk, ada sebuah tim kuat di dalamnya."</p>
+        <p class="author">- Uchiha Yuji</p>
+      </div>
+      <div class="carousel-item">
+        <p class="quote">"Kehidupan adalah apa yang terjadi ketika Anda sibuk merencanakannya."</p>
+        <p class="author">- John Lennon</p>
+      </div>
+      <div class="carousel-item">
+        <p class="quote">"Kebahagiaan tidak datang melalui keberuntungan, melainkan melalui kerja keras."</p>
+        <p class="author">- Helen Keller</p>
+      </div>
+    </div>
+    <ol class="carousel-indicators">
+      <li data-bs-target="#quoteCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#quoteCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#quoteCarousel" data-bs-slide-to="2"></li>
+    </ol>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
-<script src="script.js"></script>
-
 </body>
 </html>
