@@ -8,31 +8,49 @@
 }
 
 #warna {
-    background-color: #1EA7D1;
+  background-color: #1ea7d1;
 }
 #font-general {
-    font-size: 14px;
+  font-size: 14px;
 }
 
-#font-card-detail{
+#font-card-detail {
   font-size: 12px;
 }
 #warna-card {
-  background-color: #B4E1EF;
+  background-color: #b4e1ef;
 }
 .vertical-text {
   /*  writing-mode: vertical-lr; /* Mengatur teks vertikal dari kiri ke kanan */
-   /* text-orientation: sideways; /* Mengatur orientasi teks menjadi miring */
+  /* text-orientation: sideways; /* Mengatur orientasi teks menjadi miring */
   /* transform: rotate(180deg); /* Memutar teks 180 derajat untuk memulai dari bawah*/
-   /* transform-origin: left bottom; /* Mengatur titik rotasi di kiri bawah */
-    writing-mode: vertical-lr; 
-    text-orientation: sideways; 
-    transform: rotate(180deg); 
-    transform-origin: left bottom; 
-    transform-origin: center;
-    
-  }
-  .ditambahkan{
- margin-left: -12px;
- /* padding: 28px 0; */
-  }
+  /* transform-origin: left bottom; /* Mengatur titik rotasi di kiri bawah */
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  transform-origin: left bottom;
+  transform-origin: center;
+}
+.ditambahkan {
+  margin-left: -12px;
+  /* padding: 28px 0; */
+}
+
+/* .scroll-video::-webkit-scrollbar {
+  display: none;
+} */
+.scroll-video::-webkit-scrollbar {
+  transition: background-color 0.5s;
+  width: 10px;
+  height: 10px;
+}
+
+.scroll-video::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+}
+.scroll-video::-webkit-scrollbar-thumb:hover {
+  background-color: #e8f4ff;
+  border-radius: 10px;
+}
+
