@@ -14,6 +14,12 @@
     font-size: 14px;
 }
 
+#font-card-detail{
+  font-size: 12px;
+}
+#warna-card {
+  background-color: #B4E1EF;
+}
 .vertical-text {
   /*  writing-mode: vertical-lr; /* Mengatur teks vertikal dari kiri ke kanan */
    /* text-orientation: sideways; /* Mengatur orientasi teks menjadi miring */
