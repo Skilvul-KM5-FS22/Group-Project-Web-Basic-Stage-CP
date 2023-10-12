@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    /* color */
+    --primaryColor:#1EA7D1;
+    --secondaryColor: #29AB92;
+    --thirdColor: #454040;
+
+    /* font */
+    --font-family: "Poppins", sans-serif;
+}
+
+* {
+  font-family: var(--font-family) ;
+}
+
+.bg-warna {
+    background-color: #1EA7D1;
+}
+
+.text-warna{
+    color: var(--primaryColor);
+}
+
+.font-general {
+    font-size: 14px;
+}
+
+#navbar, #hero{
+    background: linear-gradient(to right, #1EA7D1, #29AB92);
+}
+
+#hero h1{
+    font-weight: bold;
+    line-height: 60px;
+}
+
+#hero p{
+    font-weight: 500;
+    line-height: 30px;
+    text-align: justify;
+}
