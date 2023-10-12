@@ -5,63 +5,99 @@
 } */
 * {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #warna {
-    background-color: #1EA7D1;
+  background-color: #1ea7d1;
 }
 #font-general {
-    font-size: 14px;
+  font-size: 14px;
 }
 
+/* .carousel {
+    background: linear-gradient(to right, #044A5F, #00C3FF);
+    border-radius: 10px;
+    width: 40%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+  } */
 .carousel {
-    background: linear-gradient(to right, #044A5F, #00C3FF);
-    border-radius: 10px;
-    width: 40%;
-    height: 200px;
-    margin: 0;
-    padding: 0;
-  }
-
-.carousel h3{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 20px;
+  background: linear-gradient(to right, #044a5f, #00c3ff);
+  border-radius: 10px;
+  /* width: 40%; */
+  max-height: 200px;
+  margin: 0;
+  padding: 0;
+  /* cursor: grab; */
 }
 
-.carousel-item p.quote{
-    color: white;
-    font-size: 16px;
-    padding: 0 20px 0 20px;
-    top: -10px;
+.quote-day{
+    position: relative;
+    right: -50px;
 }
-.carousel-item p.author{
-    color: white;
-    font-size: 16px;
-    padding: 30px 0px 0 320px;
-    top: -10px;
+
+.carousel h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
 }
-  
+
+.carousel-item p.quote {
+  color: white;
+  font-size: 16px;
+  padding: 0 20px 0 20px;
+  top: -10px;
+}
+.carousel-item p.author {
+  color: white;
+  font-size: 16px;
+  top: -10px;
+}
+
+.carousel-item p.author-1 {
+    padding: 35px 0px 0 300px;
+}
+.carousel-item p.author-2 {
+    padding: 35px 0px 0 160px;
+}
+.carousel-item p.author-3 {
+    padding: 35px 0px 0 260px;
+}
+
 .carousel-indicators li {
-    list-style-type: none;
-    background: #ffffff;
-    border-radius: 10px;
+  list-style-type: none;
+  background: #ffffff;
+  border-radius: 10px;
 }
 
-.buku {
-    background: linear-gradient(to right, #044A5F, #00C3FF);
-    border-radius: 10px;
-    width: 40%;
-    height: 200px;
-    margin: 0;
-    padding: 0;
-  }
+.buku-baru {
+    position: relative;
+    top: -50px;
+    left: -50px;
+}
+
+.text-blue {
+    position: relative;
+  background: linear-gradient(to bottom, #044a5f, #00c3ff);
+  transform: rotate(-90deg);
+  /* transform-origin: left bottom; */
+  width: 210px;
+  flex-shrink: 0;
+  padding: 5px;
+  border-radius: 10px 10px 0 0;
+  top: 125px;  
+  right: 135px;
+}
 
 .rotated-text {
-    transform: rotate(270deg);
-    transform-origin: left bottom;
-    color: black;
-    padding-top: 160px;
-    font-size: 18px;
+  flex-shrink: 0;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
 }
