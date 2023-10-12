@@ -17,6 +17,9 @@
 #font-card-detail {
   font-size: 12px;
 }
+.font-footer {
+  font-size: 12px;
+}
 #warna-card {
   background-color: #b4e1ef;
 }
@@ -54,3 +57,8 @@
   border-radius: 10px;
 }
 
+footer {
+  /* padding: 50px 30px 30px 30px; */
+  background: rgb(25,155,213);
+background: linear-gradient(129deg, rgba(25,155,213,1) 31%, rgba(163,225,198,1) 70%);
+}
