@@ -44,3 +44,11 @@
 #page-01 p{
     text-align: justify;
 }
+
+#footer ul {
+    list-style-type: none;
+}
+
+#footer a {
+    text-decoration: none;
+}
