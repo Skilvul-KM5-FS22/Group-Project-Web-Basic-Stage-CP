@@ -57,8 +57,30 @@
   border-radius: 10px;
 }
 
+#card-detail-video {
+  background: rgb(30, 167, 209);
+  background: linear-gradient(
+    180deg,
+    rgba(30, 167, 209, 1) 31%,
+    rgba(30, 167, 209, 0.5382528011204482) 70%
+  );
+}
+#button-tonton{
+  background-color: #5FBFCE;
+  font-size: 12px;
+}
+#button-unduh{
+  background-color: #ffffff;
+  font-size: 12px;
+  color: #5FBFCE;
+}
+
 footer {
   /* padding: 50px 30px 30px 30px; */
-  background: rgb(25,155,213);
-background: linear-gradient(129deg, rgba(25,155,213,1) 31%, rgba(163,225,198,1) 70%);
+  background: rgb(25, 155, 213);
+  background: linear-gradient(
+    129deg,
+    rgba(25, 155, 213, 1) 31%,
+    rgba(163, 225, 198, 1) 70%
+  );
 }
