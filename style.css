@@ -15,19 +15,46 @@
 }
 
 .bg-warna {
-    background-color: #1EA7D1;
+    background-color: var(--primaryColor);
 }
+
+.bg-gradasi {
+    background: rgb(166,226,198);
+    background: linear-gradient(180deg, rgba(166,226,198,1) 0%, rgba(24,154,212,1) 100%, rgba(24,154,212,1) 100%);
+}
+
+.bg-btn-warna{
+    background-color: var(--secondaryColor);
+}
+
+.text-justify {
+    text-align: justify;
+  }
 
 .text-warna{
     color: var(--primaryColor);
+}
+
+.text-28 {
+    font-size: 28px;
+}
+
+.text-warna-third{
+    color: var(--thirdColor);
 }
 
 .font-general {
     font-size: 14px;
 }
 
-#navbar, #hero{
-    background: linear-gradient(to right, #1EA7D1, #29AB92);
+#navbar{
+    background: rgb(166,226,198);
+    background: linear-gradient(rgba(24,154,212,1) 100%, rgba(24,154,212,1) 100%,180deg, rgba(166,226,198,1) 0%);
+}
+
+#hero{
+    background: rgb(166,226,198);
+    background: linear-gradient(180deg, rgba(166,226,198,1) 0%, rgba(24,154,212,1) 100%, rgba(24,154,212,1) 100%);
 }
 
 #hero h1{
@@ -38,17 +65,22 @@
 #hero p{
     font-weight: 500;
     line-height: 40px;
-    text-align: justify;
 }
 
-#page-01 p{
-    text-align: justify;
+.city p {
+    font-size: 12px;
 }
 
-#footer ul {
-    list-style-type: none;
+.font-rating{
+    font-size: 12px;
 }
 
-#footer a {
-    text-decoration: none;
-}
+footer {
+    /* padding: 50px 30px 30px 30px; */
+    background: rgb(25, 155, 213);
+    background: linear-gradient(
+      129deg,
+      rgba(25, 155, 213, 1) 31%,
+      rgba(163, 225, 198, 1) 70%
+    );
+  }
