@@ -79,21 +79,22 @@
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="input-group mb-3 w-75 mt-3">
-        <button class="btn btn-outline-dark dropdown-toggle rounded-start-5 border border-black shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-outline-dark dropdown-toggle rounded-start-5 border border-black shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-button">
           All
         </button>
         <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Title</a></li>
-        <li><a class="dropdown-item" href="#">Author</a></li>
-        <li><a class="dropdown-item" href="#">Text</a></li>
-        <li><a class="dropdown-item" href="#">Subject</a></li>
+        <li><a class="dropdown-item" href="#" data-filter="All">All</a></li>
+        <li><a class="dropdown-item" href="#" data-filter="Title">Title</a></li>
+        <li><a class="dropdown-item" href="#" data-filter="Author">Author</a></li>
+        <li><a class="dropdown-item" href="#" data-filter="Text">Text</a></li>
+        <li><a class="dropdown-item" href="#" data-filter="Subject">Subject</a></li>
         </ul>
-        <input type="text" class="form-control border border-black border-end-0" aria-label="Text input with dropdown button">
-        <span class="input-group-text rounded-end-5 bg-white border border-black shadow-sm">
+        <input type="text" class="form-control border border-black border-end-0" aria-label="Text input with dropdown button" id="search-input">
+        <button class="btn btn-outline-secondary border border-black rounded-end-5" type="button" id="search-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
           </svg>
-        </span>
+        </button>        
       </div>
     </div>
   </div>
@@ -149,8 +150,18 @@
     <div class="row">
       <h3 class="text-center fw-bold text-lg-start">Selamat Datang</h3>
     </div>
+    <!-- HASIL BUKU -->
+    <div class="row mt-3" style="display:none" id="hasil-pencarian">
+      <div class="col-md-6 col-12">
+        <!-- HASIL BUKU -->
+        <h5 class="text-center text-md-start">Berdasarkan Pencarianmu</h5>
+      </div>
+      <div class="scroll-buku row row-cols-1 row-cols-md-5 g-lg-4 overflow-x-auto d-flex flex-nowrap mt-2 mt-lg-0 mb-5" id="books-container">
+      </div>
+    </div>
+
     <!-- BUKU REKOMENDASI -->
-    <div class="row mt-3 ">
+    <div class="row mt-3 kategori" id="direkomendasi">
       <div class="col-md-6 col-12">
         <!-- BUKU REKOMENDASI -->
         <h5 class="text-center text-md-start">Direkomendasikan untuk mu</h5>
@@ -158,55 +169,51 @@
       <div class="col-md-6 text-md-end text-end col-12">
         <p>Selengkapnya</p>
       </div>
+      <div class="scroll-buku row row-cols-1 row-cols-md-5 g-lg-4 overflow-x-auto d-flex flex-nowrap mt-2 mt-lg-0 mb-5" id="direkomendasikan-books">
+      </div>
     </div>
-        <div class="scroll-buku row row-cols-1 row-cols-md-5 g-lg-4 overflow-x-auto d-flex flex-nowrap mt-2 mt-lg-0 mb-5" id="direkomendasikan-books">
-
-        </div>
 
         <!-- BUKU TERPOPULER -->
-        <div class="row mt-3 ">
+        <div class="row mt-3 kategori" id="terpopuler">
           <div class="col-md-6 col-12">
   
             <h5 class="text-center text-md-start">Terpopuler</h5>
           </div>
           <div class="col-md-6 text-md-end text-end col-12">
-            <p>Selengkapnya</p>
-  
+            <p>Selengkapnya</p>  
+          </div>
+          <div class="scroll-buku row row-cols-1 row-cols-md-5 g-lg-4 overflow-x-auto d-flex flex-nowrap mt-2 mt-lg-0 mb-5" id="terpopuler-books">
           </div>
         </div>
-        <div class="scroll-buku row row-cols-1 row-cols-md-5 g-lg-4 overflow-x-auto d-flex flex-nowrap mt-2 mt-lg-0 mb-5" id="terpopuler-books">
-        </div>
         <!-- BUKU AKADEMIK -->
-        <div class="row mt-3 ">
+        <div class="row mt-3 kategori" id="akademik">
           <div class="col-md-6 col-12">
   
             <h5 class="text-center text-md-start">Buku Akademik</h5>
           </div>
           <div class="col-md-6 text-md-end text-end col-12">
-            <p>Selengkapnya</p>
-  
+            <p>Selengkapnya</p>  
+          </div>
+          <div class="scroll-buku row row-cols-1 row-cols-md-5 g-lg-4 overflow-x-auto d-flex flex-nowrap mt-2 mt-lg-0 mb-5" id="akademik-books">
           </div>
         </div>
-        <div class="scroll-buku row row-cols-1 row-cols-md-5 g-lg-4 overflow-x-auto d-flex flex-nowrap mt-2 mt-lg-0 mb-5" id="akademik-books">          
-          
-        </div>
         <!-- BUKU LAIN -->
-        <div class="row mt-3 ">
+        <div class="row mt-3 kategori" id="lainnya">
           <div class="col-md-6 col-12">  
             <h5 class="text-center text-md-start">Lainnya</h5>
           </div>
           <div class="col-md-6 text-md-end text-end col-12">
-            <p>Selengkapnya</p>
-  
+            <p>Selengkapnya</p>  
           </div>
+          <div class="scroll-buku row row-cols-1 row-cols-md-5 g-4 overflow-x-auto d-flex flex-nowrap mt-1 mt-lg-0 mb-5" id="lainnya-books">
+          </div>          
         </div>
-        <div class="scroll-buku row row-cols-1 row-cols-md-5 g-4 overflow-x-auto d-flex flex-nowrap mt-1 mt-lg-0 mb-5" id="lainnya-books">
-        </div>          
   </div>
   <!-- BUKU STOP -->  
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+<script src="script.js"></script>
 <script src="Buku.js"></script>
 </body>
 </html>
