@@ -109,6 +109,7 @@ searchInput.addEventListener("input", function () {
 // Event listener awal untuk memuat semua buku saat halaman dimuat
 document.addEventListener("DOMContentLoaded", function () {
   searchBooks();
+  
 });
 
 tombolPencarian.addEventListener("click", function() {

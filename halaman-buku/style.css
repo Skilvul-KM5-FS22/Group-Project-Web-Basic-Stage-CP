@@ -130,3 +130,13 @@
 .card-img-top{
   height: 250px;
 }
+
+footer {
+  /* padding: 50px 30px 30px 30px; */
+  background: rgb(25, 155, 213);
+  background: linear-gradient(
+    129deg,
+    rgba(25, 155, 213, 1) 31%,
+    rgba(163, 225, 198, 1) 70%
+  );
+}
