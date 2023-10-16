@@ -29,6 +29,10 @@
 
 .text-justify {
     text-align: justify;
+  }
+
+.text-paragraph {
+    text-align: justify;
     text-indent: 50px;
   }
 
