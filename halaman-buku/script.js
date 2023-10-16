@@ -59,8 +59,8 @@ function searchBooks() {
 
         if (shouldDisplay) {
           // Tampilkan buku yang sesuai
-          const bookElement = createBookElement(book);
-          booksContainer.appendChild(bookElement);
+          const bookCard = createBookCard(book);
+          booksContainer.appendChild(bookCard);
         }
       });
     })
@@ -70,35 +70,42 @@ function searchBooks() {
 }
 
 // Fungsi untuk membuat elemen buku
-function createBookElement(book) {
-  const bookElement = document.createElement("div");
-  bookElement.className = "col-6";
+function createBookCard(book) {
+  const card = document.createElement("div");
+  card.className = "col-6";
 
-  const authors = book.author.split(',').map(author => author.trim());
-  bookElement.innerHTML = `
-    <a href="detail-buku.html" target="_blank" class="text-decoration-none">
-      <div class="list-buku card h-100 rounded-3" id="warna-card">
-        <img src="${book.img_url}" class="card-img-top p-2 rounded-4" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">${book.title}</h6>
-          <p id="font-card-detail" class="opacity-50 mb-1">${authors[0]}</p>
-          <div class="d-flex align-items-baseline" id="font-card-detail">
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" class="bi bi-star-fill" viewBox="0 0 16 16">
-              <defs>
-                <linearGradient id="star-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" style="stop-color: #fffdee;" />
-                  <stop offset="100%" style="stop-color: #ffee02;" />
-                </linearGradient>
-              </defs>
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256" fill="url(#star-gradient)" />
-            </svg>
-            <span class="ms-1">${book.rating}<span/>
-          </div>
-        </div>
-      </div>
-    </a>
-  `;
-  return bookElement;
+  const authors = book.author.split(",").map((author) => author.trim());
+
+  // Tambahkan event listener untuk mengarahkan ke halaman detail buku
+  card.addEventListener("click", function () {
+    // Redirect ke halaman detail dengan mengirimkan ID buku sebagai parameter
+    window.location.href = `detail-buku.html?id=${book.id}`;
+  });
+
+  card.innerHTML = `
+                <a href="detail-buku.html?id=${book.id}" target="_blank" class="text-decoration-none">
+                <div class="list-buku card h-100 rounded-3" id="warna-card">
+                  <img src="${book.img_url}" class="card-img-top p-2 rounded-4" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-title">${book.title}</h6>
+                    <p id="font-card-detail" class="opacity-50 mb-1">${authors[0]}</p>
+                    <div class="d-flex align-items-baseline" id="font-card-detail">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <defs>
+                          <linearGradient id="star-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: #fffdee;" />
+                            <stop offset="100%" style="stop-color: #ffee02;" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256" fill="url(#star-gradient)" />
+                      </svg>
+                      <span class="ms-1">${book.rating}<span/>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            `;
+  return card;
 }
 
 // Event listener untuk input pencarian

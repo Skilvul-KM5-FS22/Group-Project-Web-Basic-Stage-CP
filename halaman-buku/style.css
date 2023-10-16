@@ -16,14 +16,6 @@
   font-size: 14px;
 }
 
-/* .carousel {
-    background: linear-gradient(to right, #044A5F, #00C3FF);
-    border-radius: 10px;
-    width: 40%;
-    height: 200px;
-    margin: 0;
-    padding: 0;
-  } */
 .carousel {
   background: linear-gradient(to right, #044a5f, #00c3ff);
   border-radius: 10px;
@@ -129,6 +121,25 @@
 
 .card-img-top{
   height: 250px;
+}
+
+#card-detail-buku {
+  background: rgb(30, 167, 209);
+  background: linear-gradient(
+    180deg,
+    rgba(30, 167, 209, 1) 31%,
+    rgba(30, 167, 209, 0.5382528011204482) 70%
+  );
+}
+
+#button-baca{
+  background-color: #5FBFCE;
+  font-size: 12px;
+}
+#button-unduh{
+  background-color: #ffffff;
+  font-size: 12px;
+  color: #5FBFCE;
 }
 
 footer {

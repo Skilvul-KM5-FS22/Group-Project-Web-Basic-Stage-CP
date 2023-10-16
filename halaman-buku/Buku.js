@@ -1,11 +1,18 @@
-          // Fungsi untuk membuat kartu buku
-          function createBookCard(book) {
-            const card = document.createElement("div");
-            card.className = "col-6";
+// Fungsi untuk membuat kartu buku
+function createBookCard(book) {
+  const card = document.createElement("div");
+  card.className = "col-6";
 
-            const authors = book.author.split(',').map(author => author.trim());
-            card.innerHTML = `
-              <a href="detail-buku.html" target="_blank" class="text-decoration-none">
+  const authors = book.author.split(",").map((author) => author.trim());
+
+  // Tambahkan event listener untuk mengarahkan ke halaman detail buku
+  card.addEventListener("click", function () {
+    // Redirect ke halaman detail dengan mengirimkan ID buku sebagai parameter
+    window.location.href = `detail-buku.html?id=${book.id}`;
+  });
+
+  card.innerHTML = `
+                <a href="detail-buku.html?id=${book.id}" target="_blank" class="text-decoration-none">
                 <div class="list-buku card h-100 rounded-3" id="warna-card">
                   <img src="${book.img_url}" class="card-img-top p-2 rounded-4" alt="...">
                   <div class="card-body">
@@ -27,74 +34,81 @@
                 </div>
               </a>
             `;
-            return card;
-          }
-          
-          // Fungsi untuk mengambil data buku dari API
-          async function fetchBooks() {
-            try {
-              const response = await fetch("https://645611f25f9a4f23613a06ba.mockapi.io/book");
-              const data = await response.json();
-          
-              // Filter buku berdasarkan kategori
-              const terpopulerBooks = data.filter((book) => book.category === "Terpopuler");
-              const akademikBooks = data.filter((book) => book.category === "Akademik");
-              const lainnyaBooks = data.filter((book) => book.category === "Lainnya");
-          
-              // Tampilkan buku terpopuler
-              const terpopulerBooksContainer = document.getElementById("terpopuler-books");
-              terpopulerBooksContainer.innerHTML = "";
-              terpopulerBooks.forEach((book) => {
-                const bookCard = createBookCard(book);
-                terpopulerBooksContainer.appendChild(bookCard);
-              });
-          
-              // Tampilkan buku akademik
-              const akademikBooksContainer = document.getElementById("akademik-books");
-              akademikBooksContainer.innerHTML = "";
-              akademikBooks.forEach((book) => {
-                const bookCard = createBookCard(book);
-                akademikBooksContainer.appendChild(bookCard);
-              });
-          
-              // Tampilkan buku lainnya
-              const lainnyaBooksContainer = document.getElementById("lainnya-books");
-              lainnyaBooksContainer.innerHTML = "";
-              lainnyaBooks.forEach((book) => {
-                const bookCard = createBookCard(book);
-                lainnyaBooksContainer.appendChild(bookCard);
-              });
-          
-              // Tampilkan "Direkomendasikan untuk Mu" setelah semua buku ditampilkan
-              displayDirekomendasikanBooks(data);
-            } catch (error) {
-              console.error("Gagal mengambil data buku:", error);
-            }
-          }
-          
-          // Fungsi untuk menampilkan "Direkomendasikan untuk Mu"
-          function displayDirekomendasikanBooks(data) {
-            const direkomendasikanBooksContainer = document.getElementById("direkomendasikan-books");
-            direkomendasikanBooksContainer.innerHTML = "";
-          
-            // Mengambil 6 buku secara acak dari semua jenis kategori
-            const randomDirekomendasikanBooks = getRandomBooks(data, 6);
-          
-            randomDirekomendasikanBooks.forEach((book) => {
-              const bookCard = createBookCard(book);
-              direkomendasikanBooksContainer.appendChild(bookCard);
-            });
-          }
-          
-          // Fungsi untuk mengambil n buku secara acak dari data
-          function getRandomBooks(data, n) {
-            const shuffledData = [...data];
-            for (let i = shuffledData.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [shuffledData[i], shuffledData[j]] = [shuffledData[j], shuffledData[i]];
-            }
-            return shuffledData.slice(0, n);
-          }
-          
-          // Panggil fungsi untuk mengambil data buku dari API saat halaman dimuat
-          fetchBooks();
+  return card;
+}
+
+// Fungsi untuk mengambil data buku dari API
+async function fetchBooks() {
+  try {
+    const response = await fetch(
+      "https://645611f25f9a4f23613a06ba.mockapi.io/book"
+    );
+    const data = await response.json();
+
+    // Filter buku berdasarkan kategori
+    const terpopulerBooks = data.filter(
+      (book) => book.category === "Terpopuler"
+    );
+    const akademikBooks = data.filter((book) => book.category === "Akademik");
+    const lainnyaBooks = data.filter((book) => book.category === "Lainnya");
+
+    // Tampilkan buku terpopuler
+    const terpopulerBooksContainer =
+      document.getElementById("terpopuler-books");
+    terpopulerBooksContainer.innerHTML = "";
+    terpopulerBooks.forEach((book) => {
+      const bookCard = createBookCard(book);
+      terpopulerBooksContainer.appendChild(bookCard);
+    });
+
+    // Tampilkan buku akademik
+    const akademikBooksContainer = document.getElementById("akademik-books");
+    akademikBooksContainer.innerHTML = "";
+    akademikBooks.forEach((book) => {
+      const bookCard = createBookCard(book);
+      akademikBooksContainer.appendChild(bookCard);
+    });
+
+    // Tampilkan buku lainnya
+    const lainnyaBooksContainer = document.getElementById("lainnya-books");
+    lainnyaBooksContainer.innerHTML = "";
+    lainnyaBooks.forEach((book) => {
+      const bookCard = createBookCard(book);
+      lainnyaBooksContainer.appendChild(bookCard);
+    });
+
+    // Tampilkan "Direkomendasikan untuk Mu" setelah semua buku ditampilkan
+    displayDirekomendasikanBooks(data);
+  } catch (error) {
+    console.error("Gagal mengambil data buku:", error);
+  }
+}
+
+// Fungsi untuk menampilkan "Direkomendasikan untuk Mu"
+function displayDirekomendasikanBooks(data) {
+  const direkomendasikanBooksContainer = document.getElementById(
+    "direkomendasikan-books"
+  );
+  direkomendasikanBooksContainer.innerHTML = "";
+
+  // Mengambil 6 buku secara acak dari semua jenis kategori
+  const randomDirekomendasikanBooks = getRandomBooks(data, 6);
+
+  randomDirekomendasikanBooks.forEach((book) => {
+    const bookCard = createBookCard(book);
+    direkomendasikanBooksContainer.appendChild(bookCard);
+  });
+}
+
+// Fungsi untuk mengambil n buku secara acak dari data
+function getRandomBooks(data, n) {
+  const shuffledData = [...data];
+  for (let i = shuffledData.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledData[i], shuffledData[j]] = [shuffledData[j], shuffledData[i]];
+  }
+  return shuffledData.slice(0, n);
+}
+
+// Panggil fungsi untuk mengambil data buku dari API saat halaman dimuat
+fetchBooks();
