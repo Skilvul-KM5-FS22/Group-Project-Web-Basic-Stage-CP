@@ -16,10 +16,10 @@
   </head>
   <body>
     <header id="navbar">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg position-relative z-1">
         <div class="container-fluid mx-lg-5 mt-lg-4">
           <a class="navbar-brand" href="#"
-            ><img class="w-75" src="assets/logo.svg" alt="logo"
+            ><img class="w-75" src="./assets/logo.svg" alt="logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -153,24 +153,28 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5 col-md-12 mt-5 mb-lg-5">
-            <h1 class="fw-bold">Masuk untuk Menikmati fitur kami</h1>
-            <p class="fw-medium mt-4 font-20">
-              jika Anda sudah memiliki akun,<br />
-              Anda dapat
-              <a href="#" class="text-decoration-none fw-bold"
-                ><span class="text-warna">Login di sini!</span></a
-              >
-            </p>
             <img
-              src="assets/ellipse background.svg"
-              class="img-fluid position-absolute img2 top-0 me-5"
+              src="./assets/ellipse background.svg"
+              class="img-fluid position-absolute img2 top-0"
               width="40%"
             />
+            <h1 class="text-center text-lg-start fw-bold">
+              Masuk untuk Menikmati fitur kami
+            </h1>
+            <p class="fw-medium mt-4 font-20 text-center text-lg-start">
+              jika Anda sudah memiliki akun,<br />
+              Anda dapat
+              <a
+                href="#"
+                class="btn btn-link text-decoration-none text-warna fw-bold font-20 position-relative z-index-1"
+                >Login di sini!</a
+              >
+            </p>
           </div>
-          <div class="col-lg-4 col-md-12 align-self-center">
+          <div class="col-lg-4 col-md-12 align-self-center align-items-center">
             <img
-              src="assets/Character 1.svg"
-              alt=""
+              src="./assets/Character 1.svg"
+              alt="Character"
               width="80%"
               class="img-fluid"
             />
@@ -192,10 +196,7 @@
                 <label for="jenis-kelamin" class="form-label"
                   >Jenis kelamin</label
                 >
-                <select
-                  id="jenis-kelamin"
-                  class="form-select"
-                >
+                <select id="jenis-kelamin" class="form-select">
                   <option>Laki - laki</option>
                   <option>Perempuan</option>
                 </select>
@@ -211,11 +212,7 @@
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                />
+                <input type="password" class="form-control" id="password" />
               </div>
               <div class="mb-3">
                 <a type="submit" class="btn btn-light bg-warna text-white w-100"
@@ -223,31 +220,31 @@
                 >
               </div>
             </form>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-2">
-                <hr>
+                <hr />
               </div>
               <div class="col-8">
-                <p class="text-center">Atau lanjutkan dengan</p>
+                <p class="text-center fw-light">Atau lanjutkan dengan</p>
               </div>
               <div class="col-2">
-                <hr>
+                <hr />
               </div>
             </div>
             <div class="row text-center mt-3">
               <div class="col-4">
                 <a class="btn btn-light" href="#" role="button">
-                  <img src="assets/Google.svg" alt="" />
+                  <img src="./assets/Google.svg" alt="" />
                 </a>
               </div>
               <div class="col-4">
                 <a class="btn btn-light" href="#" role="button">
-                  <img src="assets/Apple.svg" alt="" />
+                  <img src="./assets/Apple.svg" alt="" />
                 </a>
               </div>
               <div class="col-4">
                 <a class="btn btn-light" href="#" role="button">
-                  <img src="assets/Facebook.svg" alt="" />
+                  <img src="./assets/Facebook.svg" alt="" />
                 </a>
               </div>
             </div>
