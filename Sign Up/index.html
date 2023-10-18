@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header id="navbar">
@@ -38,7 +39,7 @@
                 <a
                   class="nav-link active fw-medium"
                   aria-current="page"
-                  href="#"
+                  href="./../index.html"
                   >Beranda</a
                 >
               </li>
@@ -85,14 +86,14 @@
                   <li>
                     <a
                       class="dropdown-item text-white bg-transparent font-general"
-                      href="#"
+                      href="../halaman-buku/index.html"
                       >BukuPedia</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item text-white bg-transparent font-general"
-                      href="#"
+                      href="./../halaman-video/index.html"
                       >NontonPintar</a
                     >
                   </li>
@@ -131,7 +132,7 @@
                 </ul>
               </li>
               <li class="nav-item mt-3 text-center font-general">
-                <a class="btn btn-link text-decoration-none text-warna fw-bold"
+                <a class="btn btn-link text-decoration-none text-warna fw-bold" href="../login/index.html"
                   >Login</a
                 >
               </li>
@@ -165,7 +166,7 @@
               jika Anda sudah memiliki akun,<br />
               Anda dapat
               <a
-                href="#"
+                href="./../login/index.html"
                 class="btn btn-link text-decoration-none text-warna fw-bold font-20 position-relative z-index-1"
                 >Login di sini!</a
               >
@@ -180,7 +181,7 @@
             />
           </div>
           <div class="col-lg-3 col-md-12 align-self-start mt-5">
-            <form>
+            <form id="register-form">
               <div class="mb-3">
                 <label for="nama-lengkap" class="form-label"
                   >Nama lengkap</label
@@ -197,8 +198,9 @@
                   >Jenis kelamin</label
                 >
                 <select id="jenis-kelamin" class="form-select">
-                  <option>Laki - laki</option>
-                  <option>Perempuan</option>
+                  <option>-- Pilih Jenis kelamin --</option>
+                  <option value="laki-laki">Laki - laki</option>
+                  <option value="perempuan">Perempuan</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -215,10 +217,13 @@
                 <input type="password" class="form-control" id="password" />
               </div>
               <div class="mb-3">
-                <a type="submit" class="btn btn-light bg-warna text-white w-100"
-                  >Submit</a
-                >
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm-password" />
               </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-light bg-warna text-white w-100" id="submit-button">Submit</button>
+              </div>
+              <div id="error-message" class="error-message"></div>
             </form>
             <div class="row mt-5">
               <div class="col-2">
