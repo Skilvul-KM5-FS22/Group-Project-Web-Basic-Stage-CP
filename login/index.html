@@ -16,10 +16,10 @@
   </head>
   <body>
     <header id="navbar">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg position-relative z-1">
         <div class="container-fluid mx-lg-5 mt-lg-4">
           <a class="navbar-brand" href="#"
-            ><img class="w-75" src="assets/logo.svg" alt="logo"
+            ><img class="w-75" src="./assets/logo.svg" alt="logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -152,22 +152,24 @@
     <section>
       <div class="container mt-5">
         <div class="row align-items-center">
-          <div class="col-lg-5">
-            <h1 class="fw-bold">Masuk untuk Menikmati fitur kami</h1>
-            <p class="fw-medium mt-4 font-20">
-              jika Anda belum memiliki akun,<br />
-              Anda dapat
-              <a href="" class="text-decoration-none fw-bold"
-                ><span class="text-warna">Daftar di sini!</span></a
-              >
-            </p>
+          <div class="col-lg-5 col-md-12 mt-5 mb-lg-5">
             <img
-              src="assets/ellipse background.svg"
-              class="img-fluid position-absolute img2 top-0 me-5"
+              src="./assets/ellipse background.svg"
+              class="img-fluid position-absolute img2 top-0"
               width="40%"
             />
+            <h1 class="text-center text-lg-start fw-bold">Masuk untuk Menikmati fitur kami</h1>
+            <p class="fw-medium mt-4 font-20 text-center text-lg-start">
+              jika Anda belum memiliki akun,<br />
+              Anda dapat
+              <a
+              href="#"
+              class="btn btn-link text-decoration-none text-warna fw-bold font-20 position-relative z-index-1"
+              >Login di sini!</a
+              >
+            </p>
           </div>
-          <div class="col-4 align-self-center">
+          <div class="col-lg-4 col-md-12 align-self-center align-items-center">
             <img
               src="assets/Character 1.svg"
               alt=""
@@ -175,7 +177,7 @@
               class="img-fluid"
             />
           </div>
-          <div class="col-3 align-self-start mt-5">
+          <div class="col-lg-3 col-md-12 align-self-start mt-5">
             <form>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
@@ -194,8 +196,8 @@
                   id="password"
                 />
               </div>
-              <div class="mb-3 justify-content-end">
-                <a href="" class="text-decoration-none" >Pulihkan kata sandi?</a>
+              <div class="mb-3 justify-content-end text-end">
+                <a href="" class="text-decoration-none text-black-50" >Pulihkan kata sandi?</a>
               </div>
               <div class="mb-3">
                 <a type="submit" class="btn btn-light bg-warna text-white w-100"
@@ -203,12 +205,12 @@
                 >
               </div>
             </form>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-2">
                 <hr>
               </div>
               <div class="col-8">
-                <p class="text-center">Atau lanjutkan dengan</p>
+                <p class="text-center fw-light">Atau lanjutkan dengan</p>
               </div>
               <div class="col-2">
                 <hr>
