@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LiterasiKita</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar navbar-expand-lg position-relative z-1">
+        <div class="container-fluid mx-lg-5 mt-lg-4">
+          <a class="navbar-brand" href="#"
+            ><img class="w-75" src="./assets/logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-lg-3 text-center font-general">
+                <a
+                  class="nav-link active fw-medium"
+                  aria-current="page"
+                  href="../index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item dropdown mx-lg-3 text-center font-general">
+                <a
+                  class="nav-link fw-medium active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Tentang Kami
+                </a>
+                <ul class="dropdown-menu bg-warna">
+                  <li>
+                    <a
+                      class="dropdown-item text-white bg-transparent font-general"
+                      href="#"
+                    >
+                      Visi dan Misi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white bg-transparent font-general"
+                      href="#"
+                    >
+                      Tim LiterasiKita</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown mx-lg-3 text-center font-general">
+                <a
+                  class="nav-link fw-medium active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Program Kami
+                </a>
+                <ul class="dropdown-menu bg-warna">
+                  <li>
+                    <a
+                      class="dropdown-item text-white bg-transparent font-general"
+                      href="./../halaman-buku/index.html"
+                      >BukuPedia</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white bg-transparent font-general"
+                      href="./../halaman-video/index.html"
+                      >NontonPintar</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="d-flex navbar-nav">
+              <li
+                class="nav-item dropdown mx-lg-3 mt-lg-3 text-center font-general"
+              >
+                <a
+                  class="nav-link fw-medium active dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Bahasa Indonesia
+                </a>
+                <ul class="dropdown-menu bg-warna">
+                  <li>
+                    <a
+                      class="dropdown-item text-white bg-transparent font-general"
+                      href="#"
+                    >
+                      Bahasa Indonesia</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white bg-transparent font-general"
+                      href="#"
+                      >English</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item mt-3 text-center font-general">
+                <a class="btn btn-link text-decoration-none text-warna fw-bold"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item mt-3 text-center font-general">
+                <a
+                  class="btn btn-light text-warna rounded-pill fw-bold shadow"
+                  href="./../Sign Up/index.html"
+                  role="button"
+                  >Daftar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <div class="container mt-5">
+        <div class="row align-items-center">
+          <div class="col-lg-5 col-md-12 mt-5 mb-lg-5">
+            <img
+              src="./assets/ellipse background.svg"
+              class="img-fluid position-absolute img2 top-0"
+              width="40%"
+            />
+            <h1 class="text-center text-lg-start fw-bold">Masuk untuk Menikmati fitur kami</h1>
+            <p class="fw-medium mt-4 font-20 text-center text-lg-start">
+              jika Anda belum memiliki akun,<br />
+              Anda dapat
+              <a
+              href="./../Sign Up/index.html"
+              class="btn btn-link text-decoration-none text-warna fw-bold font-20 position-relative z-index-1"
+              >Daftar di sini!</a
+              >
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 align-self-center align-items-center">
+            <img
+              src="assets/Character 1.svg"
+              alt=""
+              width="80%"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-lg-3 col-md-12 align-self-start mt-5">
+            <form id="login-form">
+              <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <div class="mb-3 justify-content-end text-end">
+            <a href="" class="text-decoration-none text-black-50">Pulihkan kata sandi?</a>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-light bg-warna text-white w-100">Submit</button>
+        </div>
+            </form>
+            <div class="row mt-5">
+              <div class="col-2">
+                <hr>
+              </div>
+              <div class="col-8">
+                <p class="text-center fw-light">Atau lanjutkan dengan</p>
+              </div>
+              <div class="col-2">
+                <hr>
+              </div>
+            </div>
+            <div class="row text-center mt-3">
+              <div class="col-4">
+                <a class="btn btn-light" href="#" role="button">
+                  <img src="assets/Google.svg" alt="" />
+                </a>
+              </div>
+              <div class="col-4">
+                <a class="btn btn-light" href="#" role="button">
+                  <img src="assets/Apple.svg" alt="" />
+                </a>
+              </div>
+              <div class="col-4">
+                <a class="btn btn-light" href="#" role="button">
+                  <img src="assets/Facebook.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
