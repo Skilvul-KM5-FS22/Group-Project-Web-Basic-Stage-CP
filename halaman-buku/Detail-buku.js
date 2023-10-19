@@ -54,141 +54,12 @@ async function fetchBookDetails() {
             <h5 class="fw-semibold mt-md-0 mt-3">${book.title}</h5>
             <p>${book.author}</p>
             <div class="d-flex">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            fill="none"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-            style="margin-right: 3px"
-          >
-            <defs>
-              <linearGradient
-                id="star-gradient"
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" style="stop-color: #fffdee" />
-                <stop offset="100%" style="stop-color: #ffee02" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256"
-              fill="url(#star-gradient)"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            fill="none"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-            style="margin-right: 3px"
-          >
-            <defs>
-              <linearGradient
-                id="star-gradient"
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" style="stop-color: #fffdee" />
-                <stop offset="100%" style="stop-color: #ffee02" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256"
-              fill="url(#star-gradient)"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            fill="none"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-            style="margin-right: 3px"
-          >
-            <defs>
-              <linearGradient
-                id="star-gradient"
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" style="stop-color: #fffdee" />
-                <stop offset="100%" style="stop-color: #ffee02" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256"
-              fill="url(#star-gradient)"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            fill="none"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-            style="margin-right: 3px"
-          >
-            <defs>
-              <linearGradient
-                id="star-gradient"
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" style="stop-color: #fffdee" />
-                <stop offset="100%" style="stop-color: #ffee02" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256"
-              fill="url(#star-gradient)"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            fill="none"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-            style="margin-right: 3px"
-          >
-            <defs>
-              <linearGradient
-                id="star-gradient"
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" style="stop-color: #fffdee" />
-                <stop offset="100%" style="stop-color: #ffee02" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256"
-              fill="url(#star-gradient)"
-            />
-          </svg>
+            ${book.star}
             </div>
             <p class="mt-3 fw-medium">Deskripsi Buku :</p>
             <p class="mt-0">${book.description}</p>
             <div class="d-flex">
-              <a href="baca-buku.html?id=${book.id}" target="_blank" class="me-3">
+              <a href="*" target="_blank" class="me-3">
                 <button
                   type="button"
                   class="btn text-white rounded-5 px-3 py-2 shadow-sm fw-semibold"
@@ -298,3 +169,69 @@ if (bookId) {
 } else {
     console.error("ID buku tidak ditemukan.");
 }
+
+// Cek status login
+document.addEventListener('DOMContentLoaded', function() {
+
+  if (!isUserLoggedIn()) {
+    alert('Anda harus login terlebih dahulu.');
+      // Pengguna belum login, arahkan ke halaman login
+      window.location.href = '../login/index.html'; 
+  }
+
+});
+
+// Login
+function isUserLoggedIn() {
+  return localStorage.getItem('isLoggedIn') === 'true';
+}
+
+// Function to update the navigation elements based on login status
+function updateNavigation() {
+  const loginButton = document.getElementById('login');
+  const registerButton = document.getElementById('register');
+  const profilDropdown = document.getElementById('profil-dropdown');
+  const logoutButton = document.getElementById('logout-button');
+
+  if (isUserLoggedIn()) {
+      // Pengguna telah login, tampilkan dropdown profil dan tombol logout
+      loginButton.style.display = 'none';
+      registerButton.style.display = 'none';
+      profilDropdown.style.display = 'block';
+      // Mengganti nama dengan data dari localStorage
+      const nama = localStorage.getItem('nama');
+      const namaElement = document.getElementById('user-name');
+      if (nama) {
+          namaElement.textContent = nama;
+      }
+      // Menentukan avatar berdasarkan jenis kelamin
+      const jenisKelamin = localStorage.getItem('jenisKelamin');
+      const avatarElement = document.getElementById('user-avatar');
+      if (jenisKelamin === 'laki-laki') {
+          avatarElement.src = '../assets/men.svg'; // Avatar pria
+      } else {
+          avatarElement.src = '../assets/women.svg'; // Avatar wanita
+      }
+  } else {
+      // Pengguna belum login, tampilkan tombol login
+      loginButton.style.display = 'block';
+      registerButton.style.display = 'block';
+      profilDropdown.style.display = 'none';
+  }
+}
+
+// Add event listener for logout button
+const logoutButton = document.getElementById('logout-button');
+logoutButton.addEventListener('click', function() {
+  // Lakukan tindakan logout, seperti mengubah status login dalam localStorage
+  localStorage.setItem('isLoggedIn', 'false');
+
+  localStorage.removeItem('nama');
+  localStorage.removeItem('email');
+  localStorage.removeItem('jenisKelamin');
+  // Perbarui tampilan navigasi
+  updateNavigation();
+});
+
+// Call the function to update navigation on page load
+updateNavigation();

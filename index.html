@@ -87,14 +87,14 @@
                   <li>
                     <a
                       class="dropdown-item text-white bg-transparent font-general"
-                      href="#"
+                      href="./halaman-buku/"
                       >BukuPedia</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item text-white bg-transparent font-general"
-                      href="#"
+                      href="./halaman-video/"
                       >NontonPintar</a
                     >
                   </li>
@@ -132,16 +132,31 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item mt-3 text-center font-general">
-                <a class="btn btn-link text-decoration-none text-warna fw-bold"
-                  >Login</a
-                >
+              <li class="nav-item mt-3 text-center font-general" id="login">
+                <a class="btn btn-link text-decoration-none text-warna fw-bold" href="./login/">Login</a>
               </li>
-              <li class="nav-item mt-3 text-center font-general">
-                <a class="btn btn-light text-warna fw-bold" href="#" role="button"
+              <li class="nav-item mt-3 text-center font-general" id="register">
+                <a class="btn btn-light text-warna fw-bold" href="./Sign Up/" role="button"
                   >Daftar</a
                 >
               </li>
+
+              <li class="nav-item dropdown rounded-5 text-center" id="profil-dropdown" style="display: none;">
+                <a class="nav-link fw-medium active dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="font-general">
+                    <img id="user-avatar" class="img-fluid border border-white border-2 rounded-circle" src="" alt="user">
+                    <span id="user-name"></span>
+                </a>
+                <ul class="dropdown-menu" id="profil-dropdown">
+                    <li id="font-general">
+                        <a class="dropdown-item text-center text-white bg-transparent" type="button" href="#">Profile</a>
+                    </li>
+                    <hr class="border border-white my-lg-1">
+                    <li id="font-general">
+                        <a id="logout-button" class="dropdown-item text-center text-white bg-transparent" href="#">Logout</a>
+                    </li>
+                </ul>
+            </li>
+            
             </ul>
           </div>
         </div>

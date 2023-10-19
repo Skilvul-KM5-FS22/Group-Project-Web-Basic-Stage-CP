@@ -14,9 +14,16 @@
   font-family: var(--font-family) ;
 }
 
+#profil-dropdown {
+    background-color: #1ea7d1;
+  }
+  
 .bg-warna {
     background-color: var(--primaryColor);
 }
+#font-general {
+    font-size: 14px;
+  }
 
 .bg-gradasi {
     background: rgb(166,226,198);

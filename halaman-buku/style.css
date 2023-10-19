@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* :root {
-    --bg-color:#1EA7D1;
-} */
+:root {
+  /* color */
+  --primaryColor:#1EA7D1;
+  --secondaryColor: #29AB92;
+  --thirdColor: #454040;
+
+  /* font */
+  --font-family: "Poppins", sans-serif;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -14,6 +21,10 @@
 }
 #font-general {
   font-size: 14px;
+}
+
+#profil-dropdown {
+  background-color: #1ea7d1;
 }
 
 .carousel {

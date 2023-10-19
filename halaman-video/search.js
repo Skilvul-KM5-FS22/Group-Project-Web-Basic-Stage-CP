@@ -129,3 +129,4 @@ document.addEventListener("DOMContentLoaded", function () {
 tombolPencarian.addEventListener("click", function () {
   hasilPencarian.style.display = "block"; // Mengubah display menjadi "block" untuk menampilkan elemen
 });
+
