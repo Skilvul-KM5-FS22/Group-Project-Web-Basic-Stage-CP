@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header id="navbar">
@@ -38,7 +39,7 @@
                 <a
                   class="nav-link active fw-medium"
                   aria-current="page"
-                  href="#"
+                  href="../index.html"
                   >Beranda</a
                 >
               </li>
@@ -85,14 +86,14 @@
                   <li>
                     <a
                       class="dropdown-item text-white bg-transparent font-general"
-                      href="#"
+                      href="./../halaman-buku/index.html"
                       >BukuPedia</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item text-white bg-transparent font-general"
-                      href="#"
+                      href="./../halaman-video/index.html"
                       >NontonPintar</a
                     >
                   </li>
@@ -138,7 +139,7 @@
               <li class="nav-item mt-3 text-center font-general">
                 <a
                   class="btn btn-light text-warna rounded-pill fw-bold shadow"
-                  href="#"
+                  href="./../Sign Up/index.html"
                   role="button"
                   >Daftar</a
                 >
@@ -163,9 +164,9 @@
               jika Anda belum memiliki akun,<br />
               Anda dapat
               <a
-              href="#"
+              href="./../Sign Up/index.html"
               class="btn btn-link text-decoration-none text-warna fw-bold font-20 position-relative z-index-1"
-              >Login di sini!</a
+              >Daftar di sini!</a
               >
             </p>
           </div>
@@ -178,32 +179,21 @@
             />
           </div>
           <div class="col-lg-3 col-md-12 align-self-start mt-5">
-            <form>
+            <form id="login-form">
               <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                />
-              </div>
-              <div class="mb-3 justify-content-end text-end">
-                <a href="" class="text-decoration-none text-black-50" >Pulihkan kata sandi?</a>
-              </div>
-              <div class="mb-3">
-                <a type="submit" class="btn btn-light bg-warna text-white w-100"
-                  >Submit</a
-                >
-              </div>
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <div class="mb-3 justify-content-end text-end">
+            <a href="" class="text-decoration-none text-black-50">Pulihkan kata sandi?</a>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-light bg-warna text-white w-100">Submit</button>
+        </div>
             </form>
             <div class="row mt-5">
               <div class="col-2">
