@@ -91,7 +91,7 @@
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .text-blue {
     width: 210px;
     top: 87px;
@@ -160,7 +160,7 @@
   background-color: #ffffff;
   font-size: 12px;
   color: #5fbfce;
-}
+} */
 
 footer {
   /* padding: 50px 30px 30px 30px; */

@@ -59,7 +59,7 @@ async function fetchBookDetails() {
             <p class="mt-3 fw-medium">Deskripsi Buku :</p>
             <p class="mt-0">${book.description}</p>
             <div class="d-flex">
-              <a href="*" target="_blank" class="me-3">
+              <a href="${book.book_url}" target="_blank" class="me-3">
                 <button
                   type="button"
                   class="btn text-white rounded-5 px-3 py-2 shadow-sm fw-semibold"
@@ -68,7 +68,7 @@ async function fetchBookDetails() {
                   Baca Buku
                 </button>
               </a>
-              <a href="${book.book_url}" target="_blank">
+              <a href="${book.download_url}" target="_blank">
                 <button
                   type="button"
                   class="btn rounded-5 px-3 py-2 shadow-sm fw-semibold"
